@@ -3,8 +3,8 @@ This project demonstrates NESTED LOOPS (i.e., loops within loops)
 in the context of SEQUENCES OF SUB-SEQUENCES.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Joe Krisciunas.
+"""  # Done
 
 
 def main():
@@ -103,6 +103,14 @@ def run_test_multiply_numbers():
 
 
 def multiply_numbers(sequence_of_lists):
+    for j in range(len(sequence_of_lists)):
+
+        sublist = sequence_of_lists[j]
+
+        for k in range(len(sublist)):
+            sublist[k] = sublist[k] * (j + 1)
+
+
     """
     In the given sequence of lists,
       -- multiplies each element of the first list by 1,
@@ -117,7 +125,7 @@ def multiply_numbers(sequence_of_lists):
        [FYI: This 'can be multiplied ...' is an example of DUCK TYPING.]
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # Done
     #  ** READ THE TESTS that have been written for you (ABOVE).
     #  ** ASK QUESTIONS if you do not understand the TESTS (ABOVE).
     #
@@ -133,7 +141,7 @@ def multiply_numbers(sequence_of_lists):
 def run_test_sum_numbers():
     """ Tests the    sum_numbers    function. """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement this TEST function.
+    # Done
     #   It TESTS the  sum_numbers  function defined below.
     #   Include at least **   3   ** tests (we wrote two for you).
     # ------------------------------------------------------------------
@@ -153,9 +161,30 @@ def run_test_sum_numbers():
     print('Expected and actual are:', expected, answer)
 
     # TO DO 3 (continued): Add your ADDITIONAL test(s) here:
+# Test 1:
+    expected = 2
+    answer = sum_numbers([(8, 1, 7), (10, 12), [1, 2, 7, 4]])
+    print('Expected and actual are:', expected, answer)
 
+    # Test 1:
+    expected = 492
+    answer = sum_numbers([(39, 21, 43), (104, 102), [11, 25, 33, 24, 90]])
+    print('Expected and actual are:', expected, answer)
+
+    # Test 1:
+    expected = 163
+    answer = sum_numbers([(3, 1, 4, 5), (30, 10, 10), [1, 2, 3, 4],(30, 30,30)])
+    print('Expected and actual are:', expected, answer)
 
 def sum_numbers(seq_seq):
+    count = 0
+    for j in range(len(seq_seq)):
+
+        sublist = seq_seq[j]
+
+        for k in range(len(sublist)):
+            count = count + sublist[k]
+    return count
     """
     Returns the sum of the numbers in the given sequence
     of subsequences.  For example, if the given argument is:
