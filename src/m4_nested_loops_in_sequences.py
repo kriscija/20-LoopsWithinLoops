@@ -162,7 +162,7 @@ def run_test_sum_numbers():
 
     # TO DO 3 (continued): Add your ADDITIONAL test(s) here:
 # Test 1:
-    expected = 2
+    expected = 52
     answer = sum_numbers([(8, 1, 7), (10, 12), [1, 2, 7, 4]])
     print('Expected and actual are:', expected, answer)
 
@@ -195,7 +195,7 @@ def sum_numbers(seq_seq):
                     and each item in the subsequences is a number.
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # Done
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
 
@@ -227,6 +227,13 @@ def run_test_print_characters():
 
 
 def print_characters(sequence_of_strings):
+    for j in range(len(sequence_of_strings)):
+
+        sublist = sequence_of_strings[j]
+
+        for k in range(len(sublist)):
+            print(sublist[k])
+
     """
     Prints all the characters in the sequence of strings,
     but each character on ITS OWN LINE.  For example,
@@ -246,7 +253,7 @@ def print_characters(sequence_of_strings):
     Precondition:  the given argument is a sequence of strings.
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # Done
     #  ** READ THE TESTS that have been written for you (ABOVE).
     #  ** ASK QUESTIONS if you do not understand the TESTS (ABOVE).
     # ------------------------------------------------------------------
