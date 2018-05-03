@@ -55,6 +55,14 @@ def run_test_draw_L():
 
 
 def draw_L(window, circle, r, c):
+
+    for j in range(c):
+        for k in range(r):
+            nucenter = rg.Point(circle.center.x + (k+1)*circle.radius*2,circle.center.y)
+            nucircle = rg.Circle(nucenter,circle.radius)
+            nucircle.attach_to(window)
+            window.render(0.1)
+        circle.center.y = circle.center.y = (j+1)*circle.radius*2
     """
     See   L.pdf   in this project for pictures that may
     help you better understand the following specification:
